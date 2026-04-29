@@ -23,16 +23,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 20px;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .logo {
-  width: 140px;
+  width: 110px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -40,7 +40,13 @@ body {
 h1 {
   margin: 0;
   color: var(--ergenia-orange);
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+
+h2 {
+  margin: 14px 0 8px;
+  color: var(--ergenia-black);
+  font-size: 1.1rem;
 }
 
 .subtitle {
@@ -56,13 +62,61 @@ h1 {
   border: 1px solid var(--ergenia-gray-300);
   border-left: 6px solid var(--ergenia-orange);
   border-radius: 12px;
-  padding: 28px;
+  padding: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   line-height: 1.65;
 }
 
 .card p {
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
+}
+
+.data-list {
+  margin: 0 0 14px 0;
+  padding-left: 20px;
+}
+
+a {
+  color: var(--ergenia-orange);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background: var(--ergenia-orange);
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid var(--ergenia-orange);
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #e55f00;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ergenia-black);
+  border-color: var(--ergenia-gray-300);
+}
+
+.btn-secondary:hover {
+  background: var(--ergenia-gray-100);
 }
 
 .last-update {
@@ -71,16 +125,32 @@ h1 {
   border-top: 1px solid var(--ergenia-gray-300);
 }
 
-@media (max-width: 600px) {
+.footer {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--ergenia-gray-700);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 24px;
+  }
+
   .logo {
-    width: 110px;
+    width: 140px;
   }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .card {
-    padding: 20px;
+    padding: 28px;
+  }
+
+  .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
